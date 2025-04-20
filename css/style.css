@@ -1,0 +1,440 @@
+body {
+    background-color: #1a1a1a;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+  .neon-text {
+    font-size: 2.5rem;
+    color: #d4af37;
+    position: relative;
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+    letter-spacing: 2px;
+    animation: neon 1.5s ease-in-out infinite alternate;
+  }
+
+  .neon-text::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    filter: blur(12px);
+    opacity: 0.6;
+    box-shadow: 0 0 30px rgba(212, 175, 55, 0.8);
+  }
+
+  .neon-subtext {
+    font-size: 2rem;
+    color: #e0d6b7;
+    font-family: 'Playfair Display', serif;
+    font-weight: lighter;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  @keyframes neon {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1.05);
+      opacity: 0.8;
+    }
+  }
+
+  .custom-padding-y {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  .custom-container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .custom-heading {
+    font-size: 2.8rem;
+    font-weight: 600;
+    color: #d4af37;
+    text-align: center;
+    margin-bottom: 50px;
+    position: relative;
+    display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .custom-heading::after {
+    content: '';
+    width: 80px;
+    height: 3px;
+    background-color: gold;
+    display: block;
+    margin: 10px auto 0;
+  }
+
+  .custom-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+  }
+
+  .custom-column {
+    flex: 0 0 calc(33.333% - 30px);
+    margin-bottom: 30px;
+  }
+
+  .custom-product-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+  }
+
+  .custom-product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+  }
+
+  .custom-product-img {
+    aspect-ratio: 16 / 9;
+    width: 100%;
+    object-fit: cover;
+    margin-bottom: 0;
+  }
+
+  .custom-card-body {
+    padding: 25px 20px;
+    background: #fafafa;
+    margin-top: -15px;
+  }
+
+  .custom-product-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 5px;
+  }
+
+  .custom-product-price {
+    font-size: 1.1rem;
+    color: #8c7500;
+    margin-bottom: 20px;
+  }
+
+  .custom-btn-details,
+  .custom-btn-buy {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    text-decoration: none;
+    margin: 5px;
+    transition: all 0.3s ease;
+  }
+
+  .custom-btn-details {
+    background-color: transparent;
+    color: #8c7500;
+    border: 2px solid #8c7500;
+  }
+
+  .custom-btn-details:hover {
+    background-color: #8c7500;
+    color: #fff;
+  }
+
+  .custom-btn-buy {
+    background-color: #1a1a1a;
+    color: #fff;
+  }
+
+  .custom-btn-buy:hover {
+    background-color: #000;
+  }
+
+  /* Search bar */
+  .search-wrapper {
+    text-align: center;
+    margin: 30px 0;
+  }
+
+  .search-wrapper input {
+    padding: 12px 20px;
+    border: 2px solid #d4af37;
+    border-radius: 30px;
+    width: 60%;
+    max-width: 400px;
+    font-size: 1rem;
+  }
+
+  .search-wrapper button {
+    padding: 12px 25px;
+    margin-left: 10px;
+    background-color: #d4af37;
+    color: #1a1a1a;
+    border: none;
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  @media (max-width: 768px) {
+.search-wrapper {
+  display: flex;
+  align-items: center; /* Vertically centers items */
+}
+
+.search-wrapper input {
+  width: 70%; /* Adjust width on smaller screens */
+  margin-bottom: 10px; /* Add space between input and button */
+  height: 40px; /* Set the same height for input */
+  padding: 0 10px; /* Optional: adds some padding inside input */
+  line-height: 40px; /* Ensure the text is vertically centered */
+}
+
+.search-wrapper button {
+  width: 40%; /* Make button as wide as the input */
+  height: 40px; /* Set the same height for button */
+  padding: 0 10px; /* Optional: adds some padding inside button */
+  line-height: 40px; /* Ensure text is vertically centered in button */
+  display: flex;
+  align-items: center; /* Center content in button */
+  justify-content: center; /* Center content horizontally */
+}
+}
+
+  @media (max-width: 1024px) {
+    .custom-column {
+      flex: 0 0 calc(50% - 30px);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .custom-column {
+      flex: 0 0 100%;
+    }
+
+    .neon-text {
+      font-size: 2rem;
+    }
+
+    .custom-heading {
+      font-size: 2.5rem;
+    }
+
+    .custom-product-title {
+      font-size: 1.1rem;
+    }
+
+    .custom-product-price {
+      font-size: 1rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .neon-text {
+      font-size: 1.8rem;
+    }
+
+    .custom-heading {
+      font-size: 2.2rem;
+    }
+
+    .custom-product-title {
+      font-size: 1rem;
+    }
+
+    .custom-product-price {
+      font-size: 0.9rem;
+    }
+  }
+   /* Footer Styling */
+   .footer {
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 1rem;
+    position: relative;
+  }
+
+  .footer a {
+    color: #d4af37;
+    text-decoration: none;
+  }
+
+  /* Fixed Footer for Small Screens */
+  @media (max-width: 768px) {
+    .footer {
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      padding: 12px 0;
+    }
+
+    /* Optional: Reduce padding on very small devices */
+    .footer p {
+      font-size: 0.9rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .footer {
+      padding: 10px 0;
+    }
+
+    .footer p {
+      font-size: 0.85rem;
+    }
+  }
+* {
+    box-sizing: border-box;
+  }
+
+  body {
+    background-color: #1a1a1a;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Neon Heading */
+  .neon-text {
+    font-size: clamp(1.8rem, 5vw, 2.5rem);
+    color: #d4af37;
+    position: relative;
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+    letter-spacing: 2px;
+    animation: neon 1.5s ease-in-out infinite alternate;
+    text-align: center;
+  }
+
+  .neon-text::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    filter: blur(12px);
+    opacity: 0.6;
+    box-shadow: 0 0 30px rgba(212, 175, 55, 0.8);
+  }
+
+  @keyframes neon {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1.05);
+      opacity: 0.8;
+    }
+  }
+
+  .detail-info-section {
+    padding: 60px 20px;
+    flex-grow: 1; /* Allow content section to grow and take available space */
+  }
+
+  .detail-custom-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .detail-info-text {
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    color: #e0e0e0;
+    line-height: 1.8;
+    margin-top: 30px;
+    font-weight: 400;
+  }
+
+  .detail-info-text p {
+    margin-bottom: 20px;
+  }
+
+  /* Go Back Button */
+  .detail-go-back-btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background-color: #1a1a1a;
+    color: #d4af37;
+    padding: 10px 18px;
+    border: 2px solid #d4af37;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    z-index: 999;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+  }
+
+  .detail-go-back-btn:hover {
+    background-color: #d4af37;
+    color: #1a1a1a;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Footer Styling */
+  .footer {
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 1rem;
+    position: relative;
+  }
+
+  .footer a {
+    color: #d4af37;
+    text-decoration: none;
+  }
+
+  /* Fixed Footer for Small Screens */
+  @media (max-width: 768px) {
+    .footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      padding: 12px 0;
+    }
+
+    /* Optional: Reduce padding on very small devices */
+    .footer p {
+      font-size: 0.9rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .footer {
+      padding: 10px 0;
+    }
+
+    .footer p {
+      font-size: 0.85rem;
+    }
+  }
